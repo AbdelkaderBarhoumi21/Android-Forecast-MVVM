@@ -8,7 +8,7 @@ lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
 kotlin = "2.2.10"
 composeBom = "2026.02.01"
-
+navigation = "2.9.8"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,8 +25,20 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+navigation-fragment = {group = "androidx.navigation" , name = "navigation-fragment-ktx", version.ref = "navigation"}
+navigation-ui = { group = "androidx.navigation" , name = "navigation-ui-ktx" , version.ref = "navigation"}
+
+#Navigation
+# androidx.navigation : navigation-fragment-ktx : 2.7.7
+# ↑                        ↑                  ↑
+# Group ID              Artifact ID           Version
+# The name to the left of the = is something you make up like navigation-fragment ou call it nav-frag no matter .
+# Gradle doesn't care — it just reads what's on the right (group + name + version).[plugins]
+
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin",     version.ref = "navigation" }
 
