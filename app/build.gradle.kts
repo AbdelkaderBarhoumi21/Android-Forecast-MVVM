@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.navigation.safeargs)
     alias(libs.plugins.ksp)
 }
@@ -34,9 +35,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    kotlinOptions {
-        jvmTarget = "11"
-    }
+    kotlinOptions { jvmTarget = "11" }
 
     buildFeatures {
         compose = true
@@ -45,6 +44,7 @@ android {
 }
 
 dependencies {
+    // Compose
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
@@ -52,7 +52,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    // Testing
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
@@ -70,14 +71,31 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
 
-    // Lifecycle
+    // Lifecycle — UNE SEULE fois ✅
     implementation(libs.lifecycle.viewmodel)
     implementation(libs.lifecycle.runtime)
 
-    // Retrofit
+    // Retrofit — gson séparé supprimé ✅
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
 
-    // Constraint layout
-    implementation(libs.constraint.layout)
+    // ConstraintLayout
+    implementation(libs.constraintlayout)
+
+    // Coroutines
+    implementation(libs.coroutines.core)
+    implementation(libs.coroutines.android)
+
+    // Glide — kapt car ksp non supporté par Glide 4.x
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
+
+    // Location
+    implementation(libs.play.services.location)
+
+    // Material
+    implementation(libs.material)
+
+    // Preference
+    implementation(libs.preference)
 }
