@@ -7,6 +7,7 @@ espressoCore = "3.5.1"
 lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
 kotlin = "2.2.10"
+ksp    = "2.2.10-1.0.29"
 composeBom = "2026.02.01"
 navigation = "2.8.9"
 room       = "2.6.1"
@@ -47,12 +48,7 @@ retrofit-gson       = { group = "com.squareup.retrofit2", name = "converter-gson
 
 
 
-#Navigation
-# androidx.navigation : navigation-fragment-ktx : 2.7.7
-# ↑                        ↑                  ↑
-# Group ID              Artifact ID           Version
-# The name to the left of the = is something you make up like navigation-fragment ou call it nav-frag no matter .
-# Gradle doesn't care — it just reads what's on the right (group + name + version).[plugins]
+
 
 
 
@@ -60,4 +56,6 @@ retrofit-gson       = { group = "com.squareup.retrofit2", name = "converter-gson
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin",     version.ref = "navigation" }
+ksp                 = { id = "com.google.devtools.ksp",                  version.ref = "ksp"    }
+
 
