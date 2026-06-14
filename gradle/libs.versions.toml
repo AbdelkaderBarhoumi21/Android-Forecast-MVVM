@@ -8,7 +8,10 @@ lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
 kotlin = "2.2.10"
 composeBom = "2026.02.01"
-navigation = "2.9.8"
+navigation = "2.8.9"
+room       = "2.6.1"
+lifecycle  = "2.8.0"
+retrofit   = "2.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,8 +28,24 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+# Navigation
 navigation-fragment = {group = "androidx.navigation" , name = "navigation-fragment-ktx", version.ref = "navigation"}
 navigation-ui = { group = "androidx.navigation" , name = "navigation-ui-ktx" , version.ref = "navigation"}
+
+# Room
+room-runtime = {group = "androidx.room" , name= "room-runtime" , version.ref = "room"}
+room-ktx = {group = "androidx.room" , name= "room-ktx" , version.ref = "room"}
+room-compiler = {group = "androidx.room", name="room-compiler", version.ref = "room"}
+
+# Lifecycle
+lifecycle-viewmodel = { group = "androidx.lifecycle",  name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle"  }
+lifecycle-runtime   = { group = "androidx.lifecycle",  name = "lifecycle-runtime-ktx",   version.ref = "lifecycle"  }
+
+# Retrofit
+retrofit            = { group = "com.squareup.retrofit2", name = "retrofit",             version.ref = "retrofit"   }
+retrofit-gson       = { group = "com.squareup.retrofit2", name = "converter-gson",       version.ref = "retrofit"   }
+
+
 
 #Navigation
 # androidx.navigation : navigation-fragment-ktx : 2.7.7
