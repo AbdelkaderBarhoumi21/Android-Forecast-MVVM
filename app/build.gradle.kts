@@ -77,4 +77,7 @@ dependencies {
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
+
+    // Constraint layout
+    implementation(libs.constraint.layout)
 }

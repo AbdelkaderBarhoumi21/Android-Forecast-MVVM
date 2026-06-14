@@ -13,6 +13,7 @@ navigation          = "2.8.9"
 room                = "2.6.1"
 lifecycle           = "2.8.0"
 retrofit            = "2.9.0"
+constraintLayout    = "2.2.1"
 
 [libraries]
 androidx-core-ktx                   = { group = "androidx.core",          name = "core-ktx",                version.ref = "coreKtx"             }
@@ -50,6 +51,10 @@ lifecycle-runtime                   = { group = "androidx.lifecycle",      name 
 # Retrofit
 retrofit                            = { group = "com.squareup.retrofit2",  name = "retrofit",                version.ref = "retrofit"           }
 retrofit-gson                       = { group = "com.squareup.retrofit2",  name = "converter-gson",          version.ref = "retrofit"           }
+
+# Constraint layout
+constraint-layout                   = {group = "androidx.constraintlayout", name = "constraintlayout", version.ref="constraintLayout"}
+
 
 [plugins]
 # Android & Kotlin
